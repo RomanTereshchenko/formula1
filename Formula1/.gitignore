@@ -1,1 +1,4 @@
 /target/
+/file.txt
+/org.eclipse.jdt.core.prefs
+/org.eclipse.m2e.core.prefs
