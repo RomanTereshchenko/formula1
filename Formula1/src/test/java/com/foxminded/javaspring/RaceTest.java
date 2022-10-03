@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class RaceTest {
 
 	@Test
-	void output_returnsCorrectList_givenFiles() {
+	void racersResultsPrintout_returnsCorrectPrintout_givenFiles() {
 		assertEquals("1. Sebastian Vettel    | FERRARI                     | 00:01:04.415\n"
 				+ "2. Daniel Ricciardo    | RED BULL RACING TAG HEUER   | 00:01:12.013\n"
 				+ "3. Valtteri Bottas     | MERCEDES                    | 00:01:12.434\n"
@@ -27,7 +27,14 @@ class RaceTest {
 				+ "16. Brendon Hartley     | SCUDERIA TORO ROSSO HONDA   | 00:01:13.179\n"
 				+ "17. Marcus Ericsson     | SAUBER FERRARI              | 00:01:13.265\n"
 				+ "18. Lance Stroll        | WILLIAMS MERCEDES           | 00:01:13.323\n"
-				+ "19. Kevin Magnussen     | HAAS FERRARI                | 00:01:13.393", Race.output());
+				+ "19. Kevin Magnussen     | HAAS FERRARI                | 00:01:13.393", Race.racersResultsPrintout());
 	}
-
+	
+	@Test
+	void getFileLines_returnsLinesFromTestFile_testFile() {
+		
+		assertEquals("[line1, line2, line3]", Race.getFileLines("testFile.txt").toString());
+	}
+	
+	
 }
